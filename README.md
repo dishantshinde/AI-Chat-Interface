@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🚀 AI Chat App (Next.js)
+This is a Next.js project bootstrapped with create-next-app. It’s a fully-featured AI chat application with streaming capabilities and a dynamic user interface.
 
-## Getting Started
+✨ Features
+⚡ Real-time AI Responses using Server-Sent Events (SSE)
 
-First, run the development server:
+💬 Chat Conversations with persistent message history
 
-```bash
+➕ Create New Chats seamlessly
+
+📂 View & Select Past Chats
+
+♻️ Auto-refresh chat list
+
+🧠 Dynamic Chat Interface with Markdown rendering
+
+🧹 Clean & Organized File Structure
+
+📱 Responsive & Accessible UI
+
+🔄 Auto-scroll to latest messages
+
+📁 Project Structure
+
+/app  
+├── /api  
+│ ├── /chat → Create a new chat  
+│ ├── /chats → Fetch all chats  
+│ ├── /chats/[id] → Fetch a particular chat by ID  
+│ ├── /chats/[id]/messages → Add a new message to a specific chat  
+│ └── /ollama → Stream assistant response from Ollama
+
+├── /components  
+│ ├── ChatArea.tsx → Renders list of messages in current chat  
+│ ├── InputBox.tsx → Input field + Send/Stop button  
+│ ├── Message.tsx → Renders an individual message  
+│ ├── Sidebar.tsx → Layout for chat navigation and "New Chat"  
+│ └── ChatList.tsx → Displays chat previews in Sidebar
+
+└── page.tsx → Main entry point (renders Sidebar + ChatArea)
+
+🧪 Tech Stack
+Next.js 14 (App Router)
+
+React + TypeScript
+
+Tailwind CSS
+
+Streaming API with fetch + ReadableStream
+
+React Markdown for rendering assistant messages
+
+⚙️ Getting Started
+Install dependencies:
+
+npm install
+
+# or
+
+yarn install
+
+# or
+
+pnpm install
+
+# or
+
+bun install
+Run the development server:
+
 npm run dev
+
 # or
+
 yarn dev
+
 # or
+
 pnpm dev
+
 # or
+
 bun dev
-```
+Open http://localhost:3000 in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🧰 Key Commands
+npm run dev — Start development server
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+npm run build — Create production build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+npm start — Start production server
 
-## Learn More
+🌐 Deployment
+You can deploy this app on platforms like:
 
-To learn more about Next.js, take a look at the following resources:
+Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Render
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Netlify
 
-## Deploy on Vercel
+Refer to the Next.js deployment docs for more details.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+📚 Resources
+Next.js Documentation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+React Markdown
+
+ReadableStream + fetch API
+
+👨‍💻 Author
+Dishant Shinde — Built with ❤️ for learning and showcasing AI chat functionality.
